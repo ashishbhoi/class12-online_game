@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman Game</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +16,23 @@
         font-family: "Inter", sans-serif;
       }
       .keyboard-btn {
-        @apply bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-200 ease-in-out;
+        background-color: #4b5563; /* bg-gray-600 */
+        color: #ffffff; /* text-white */
+        font-weight: 700; /* font-bold */
+        padding: 0.75rem 1rem; /* py-3 px-4 */
+        border-radius: 0.5rem; /* rounded-lg */
+        text-align: center; /* text-center */
+        transition-property: background-color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+      .keyboard-btn:hover {
+        background-color: #6b7280; /* hover:bg-gray-500 */
       }
       .keyboard-btn:disabled {
-        @apply bg-gray-800 text-gray-500 cursor-not-allowed;
+        background-color: #1f2937; /* bg-gray-800 */
+        color: #6b7280; /* text-gray-500 */
+        cursor: not-allowed;
       }
       .hangman-part {
         stroke: #cbd5e1; /* slate-300 */
